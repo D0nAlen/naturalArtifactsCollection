@@ -1,14 +1,59 @@
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cormorant", sans-serif;
+  src: url("../fonts/Cormorant-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cormorant", sans-serif;
+  src: url("../fonts/Cormorant-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cormorant", sans-serif;
+  src: url("../fonts/Cormorant-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
 * {
   margin: 0;
 }
 
 body {
+  font-family: "Open Sans", sans-serif;
   background-color: #1d2f30;
 }
 
 .header__menu {
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  color: #FFFFFF;
+  color: #fff;
+}
+.header__button {
+  width: 24px;
+  height: 24px;
+}
+.header__button._search {
+  mask-image: url(../IMG/search.svg);
+  -webkit-mask-image: url(../IMG/search.svg);
+}
+.header__button._log-in {
+  mask-image: url(../IMG/log-in.svg);
+  -webkit-mask-image: url(../IMG/log-in.svg);
 }/*# sourceMappingURL=main.css.map */

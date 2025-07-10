@@ -1,0 +1,40 @@
+$font-family-open-sans: "Open Sans", sans-serif;
+$font-family-cormorant: "Cormorant", sans-serif;
+
+  @font-face {
+    font-family: $font-family-open-sans;
+    src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: $font-family-open-sans;
+    src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: $font-family-open-sans;
+    src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: $font-family-cormorant;
+    src: url("../fonts/Cormorant-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: $font-family-cormorant;
+    src: url("../fonts/Cormorant-Bold.ttf") format("truetype");
+    font-weight: 700;
+  }
+
+//   ???
+  @font-face {
+    font-family: $font-family-cormorant;
+    src: url("../fonts/Cormorant-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+ }
