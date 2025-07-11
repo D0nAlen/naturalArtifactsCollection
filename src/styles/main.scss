@@ -7,28 +7,71 @@
 
 body {
   font-family: font.$font-family-open-sans;
-
   background-color: var.$background;
 }
 
+button{
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
 .header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  
+  background-color: var.$background;
+  z-index: 2;
+  &__logo {
+    width: 65px;
+    height: 20px;
+    margin-right: 125px;
+  }
   &__menu {
+    display: flex;
+    gap: 64px;
     font-family: font.$font-family-open-sans;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     color: var.$white;
+    margin-right: 296px;
   }
   &__button {
     width: 24px;
     height: 24px;
+    background-color: var.$primary-green;
     &._search {
+      margin-right: 64px;
       mask-image: url(../IMG/search.svg);
+      mask-repeat: no-repeat;
       -webkit-mask-image: url(../IMG/search.svg);
     }
     &._log-in {
       mask-image: url(../IMG/log-in.svg);
+      mask-repeat: no-repeat;
       -webkit-mask-image: url(../IMG/log-in.svg);
     }
+  }
+}
+
+.banner{
+  background-image: url(../IMG/1_1.png);
+  background-repeat: no-repeat;
+  height: 550px;
+  padding-left: 165px;
+  // position: relative;
+  &__h1{
+    padding-top: 115px;
   }
 }

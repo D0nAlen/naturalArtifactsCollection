@@ -38,22 +38,68 @@ body {
   background-color: #1d2f30;
 }
 
+button {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  background-color: #1d2f30;
+  z-index: 2;
+}
+.header__logo {
+  width: 65px;
+  height: 20px;
+  margin-right: 125px;
+}
 .header__menu {
+  display: flex;
+  gap: 64px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #fff;
+  margin-right: 296px;
 }
 .header__button {
   width: 24px;
   height: 24px;
+  background-color: #bae249;
 }
 .header__button._search {
+  margin-right: 64px;
   mask-image: url(../IMG/search.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   -webkit-mask-image: url(../IMG/search.svg);
 }
 .header__button._log-in {
   mask-image: url(../IMG/log-in.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   -webkit-mask-image: url(../IMG/log-in.svg);
+}
+
+.banner {
+  background-image: url(../IMG/1_1.png);
+  background-repeat: no-repeat;
+  height: 550px;
+  padding-left: 165px;
+}
+.banner__h1 {
+  padding-top: 115px;
 }/*# sourceMappingURL=main.css.map */
