@@ -75,6 +75,9 @@ li {
   line-height: 150%;
   color: #fff;
 }
+.header__container {
+  display: flex;
+}
 .header__button {
   width: 24px;
   height: 24px;
@@ -100,17 +103,17 @@ li {
   background-size: cover;
   height: 550px;
   z-index: 1;
+  margin-bottom: 60px;
 }
 .banner__shade {
   width: 100%;
   height: 100%;
   background-color: #1d2f30;
   opacity: 0.7;
-  padding: 115px 165px;
+  padding: 175px 165px;
 }
 .banner__h1 {
   max-width: 635px;
-  padding-top: 115px;
   font-weight: 700;
   font-size: 60px;
   line-height: 100%;
@@ -136,4 +139,67 @@ li {
   background-color: rgba(255, 255, 255, 0);
   display: flex;
   gap: 11px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(255px, 1fr));
+  padding: 0 165px;
+  gap: 30px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.cards__item {
+  border: 1px solid #0b1919;
+}
+.cards__container {
+  padding: 16px 15px 27px;
+  box-sizing: border-box;
+}
+.cards__container._img {
+  background: #0b1919;
+}
+.cards__container._content {
+  height: 243px;
+}
+.cards__icon {
+  font-family: "Cormorant", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #899d9d;
+  position: absolute;
+  border: 1px solid #899d9d;
+  border-radius: 100%;
+  padding: 0 3px 2px;
+}
+.cards__img {
+  padding-top: 13px;
+  background: #0b1919;
+}
+.cards__h2 {
+  font-family: "Cormorant", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  color: #fff;
+  padding-bottom: 8px;
+}
+.cards__text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #899d9d;
+}
+.cards__button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #bae249;
+  line-height: 150%;
+  border: 1px solid #bae249;
+  padding: 10.5px 28.5px;
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0 15px 27px;
 }/*# sourceMappingURL=main.css.map */
