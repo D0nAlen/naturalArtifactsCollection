@@ -25,6 +25,31 @@ li {
   list-style-type: none;
 }
 
+h2 {
+  font-family: font.$font-family-cormorant;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  color: var.$white;
+  padding-bottom: 8px;
+}
+.next__button {
+  font-family: font.$font-family-open-sans;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  gap: 11px;
+}
+
+.text {
+  font-family: font.$font-family-open-sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
 .header {
   height: 60px;
   display: flex;
@@ -95,22 +120,11 @@ li {
   }
   &__text {
     max-width: 635px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
     color: var.$white;
-    font-family: font.$font-family-open-sans;
     margin-bottom: 24px;
   }
   &__button {
-    font-family: font.$font-family-open-sans;
-    font-weight: 700;
-    font-size: 16px;
     color: var.$primary-green;
-    border: none;
-    background-color: rgba(255, 255, 255, 0);
-    display: flex;
-    gap: 11px;
   }
 }
 
@@ -149,21 +163,8 @@ li {
     padding-top: 13px;
     background: var.$background-shade;
   }
-  &__h2 {
-    font-family: font.$font-family-cormorant;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 150%;
-    color: var.$white;
-    padding-bottom: 8px;
-  }
   &__text {
-    font-family: font.$font-family-open-sans;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
     color: var.$grey;
-    // margin-bottom: 8px;
   }
   &__button {
     font-family: font.$font-family-open-sans;
@@ -200,17 +201,18 @@ li {
     color: var.$white;
     font-family: font.$font-family-cormorant;
   }
+  &__container {
+    display: flex;
+    gap: 30px;
+  }
   &__table {
     width: 825px;
-    // height: 493px;
     display: grid;
     grid-template-columns: repeat(4);
     grid-template-rows: 150px 293px;
     background: var.$background-shade;
     padding: 16px;
-    // gap: 18px 22px;
     gap: 18px 0;
-
     .art1 {
       position: relative;
       grid-column: 1 / 2;
@@ -295,5 +297,24 @@ li {
   }
   .art__img {
     position: absolute;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 255px;
+    height: 493px;
+    background: var.$primary-green;
+    padding: 16px 16px 24px;
+    box-sizing: border-box;
+    ._h2-color {
+      color: var.$background;
+    }
+    &__text {
+      color: var.$green-text;
+    }
+    ._btn-color {
+      color: var.$background-shade;
+    }
   }
 }
