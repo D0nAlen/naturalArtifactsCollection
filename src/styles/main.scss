@@ -34,6 +34,14 @@ h2 {
   color: var.$white;
   padding-bottom: 8px;
 }
+
+h3 {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  font-family: font.$font-family-cormorant;
+}
 .next__button {
   font-family: font.$font-family-open-sans;
   font-weight: 700;
@@ -103,7 +111,7 @@ h2 {
   height: 550px;
   z-index: 1;
   margin-bottom: 60px;
-  .shade {
+  &__shade {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,23 +119,23 @@ h2 {
     background-color: var.$background;
     opacity: 0.7;
     padding: 175px 165px;
-    .h1 {
-      max-width: 635px;
-      font-weight: 700;
-      font-size: 60px;
-      line-height: 100%;
-      color: var.$white;
-      font-family: font.$font-family-cormorant;
-      margin-bottom: 21px;
-    }
-    ._text {
-      max-width: 635px;
-      color: var.$white;
-      margin-bottom: 24px;
-    }
-    ._button {
-      color: var.$primary-green;
-    }
+  }
+  &__h1 {
+    max-width: 635px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 100%;
+    color: var.$white;
+    font-family: font.$font-family-cormorant;
+    margin-bottom: 21px;
+  }
+  &__text {
+    max-width: 635px;
+    color: var.$white;
+    margin-bottom: 24px;
+  }
+  &__button {
+    color: var.$primary-green;
   }
 }
 
@@ -195,14 +203,10 @@ h2 {
 }
 
 .new-artefacts {
+  margin-bottom: 60px;
   &__h3 {
-    margin-bottom: 30px;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 100%;
     color: var.$white;
-    font-family: font.$font-family-cormorant;
+    margin-bottom: 30px;
   }
   &__container {
     display: flex;
@@ -310,14 +314,89 @@ h2 {
     background: var.$primary-green;
     padding: 16px 16px 24px;
     box-sizing: border-box;
-    ._h2-color {
-      color: var.$background;
-    }
     &__text {
       color: var.$green-text;
     }
-    ._btn-color {
+    &__button {
       color: var.$background-shade;
     }
+  }
+  &__h2 {
+    color: var.$background;
+  }
+}
+
+.help-project {
+  z-index: 1;
+  height: 463px;
+  background-image: url(../IMG/help-project/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 61px;
+  z-index: 0;
+  &__shade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    background-color: var.$background;
+    opacity: 0.7;
+    padding: 60px 165px 61px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__h3 {
+    color: var.$white;
+  }
+  &__text {
+    max-width: 825px;
+    color: var.$white;
+    margin: 16px 0 24px;
+  }
+  &__textbox {
+    width: 350px;
+    box-sizing: border-box;
+    font-family: font.$font-family-open-sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 10.5px 16px;
+    margin-bottom: 24px;
+    border: none;
+    z-index: 3;
+    &::-webkit-input-placeholder {
+      color: var.$grey;
+    }
+    &:-moz-placeholder {
+      color: var.$grey;
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      color: var.$grey;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: var.$grey;
+    }
+    &::-ms-input-placeholder {
+      color: var.$grey;
+    }
+    &::placeholder {
+      color: var.$grey;
+    }
+  }
+  &__button {
+    width: 145px;
+    padding: 11.5px 27px;
+    background: var.$primary-green;
+    font-family: font.$font-family-open-sans;
+    font-weight: 700;
+    font-size: 16px;
+    color: var.$background-shade;
+    border: none;
+    box-sizing: border-box;
+    z-index: 3;
   }
 }
