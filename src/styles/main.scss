@@ -105,20 +105,35 @@ h3 {
 }
 
 .banner {
-  background-image: url(../IMG/1_1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 550px;
-  z-index: 1;
-  margin-bottom: 60px;
-  &__shade {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80vw;
+  position: relative;
+  padding: 175px 165px 116px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../IMG/1_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    z-index: -2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background-color: var.$background;
     opacity: 0.7;
-    padding: 175px 165px;
+    z-index: -1;
   }
   &__h1 {
     max-width: 635px;
@@ -146,6 +161,7 @@ h3 {
   gap: 30px;
   position: relative;
   z-index: 3;
+  margin-top: 60px;
   &__item {
     border: 1px solid var.$background-shade;
   }
@@ -365,7 +381,7 @@ h3 {
     color: var.$white;
     margin: 16px 0 24px;
   }
-  &__container{
+  &__container {
     display: flex;
     flex-direction: column;
   }
@@ -441,6 +457,5 @@ h3 {
     font-size: 12px;
     color: var.$grey;
     background-color: var.$background;
-
   }
 }
