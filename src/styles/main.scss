@@ -327,25 +327,35 @@ h3 {
 }
 
 .help-project {
-  z-index: 1;
-  height: 463px;
-  background-image: url(../IMG/help-project/background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 61px;
-  z-index: 0;
-  &__shade {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 60px 0 61px;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../IMG/help-project/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    z-index: -2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background-color: var.$background;
     opacity: 0.7;
-    padding: 60px 165px 61px;
-  }
-  &__container {
-    display: flex;
-    flex-direction: column;
+    z-index: -1;
   }
   &__h3 {
     color: var.$white;
@@ -354,6 +364,10 @@ h3 {
     max-width: 825px;
     color: var.$white;
     margin: 16px 0 24px;
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
   }
   &__textbox {
     width: 350px;
@@ -365,7 +379,7 @@ h3 {
     padding: 10.5px 16px;
     margin-bottom: 24px;
     border: none;
-    z-index: 3;
+    background: var.$white;
     &::-webkit-input-placeholder {
       color: var.$grey;
     }
@@ -397,6 +411,36 @@ h3 {
     color: var.$background-shade;
     border: none;
     box-sizing: border-box;
-    z-index: 3;
+    background: var.$primary-green;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  background: var.$background-shade;
+  .social {
+    display: flex;
+    padding: 14px 0;
+    justify-items: center;
+    gap: 30px;
+  }
+  ._youtube {
+    padding-left: 1px;
+    padding-top: 4px;
+  }
+  .copyright {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 3px 0;
+    font-family: font.$font-family-open-sans;
+    font-weight: 400;
+    font-size: 12px;
+    color: var.$grey;
+    background-color: var.$background;
+
   }
 }
