@@ -5,18 +5,15 @@
   margin: 0;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 body {
   font-family: font.$font-family-cormorant;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
   position: relative;
   background-color: var.$background;
-  // width: 100vw;
+  overflow-x: hidden;
 }
 
 button {
@@ -71,7 +68,7 @@ h3 {
   justify-content: space-between;
   padding: 18px 165px;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   z-index: 2;
   background-color: var.$background;
   box-sizing: border-box;
@@ -129,12 +126,27 @@ h3 {
   padding: 175px 165px 116px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   width: 100%;
-  @media (max-width: 720px) {//and (max-width: var.$r_mobile_720) {
-    padding: 129px 32px 30px;
-    // display: flex;
+
+  &__container {
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 0 165px;
+    @media (max-width: 1160px) {
+      padding: 0 33px;
+    }
   }
+  // @media (max-width: 900px) {
+  // }
+  // @media (max-width: 600px) {
+
+  // }
+  // @media (max-width: 720px) {
+  //   padding: 129px 32px 30px;
+  // }
   &::before {
     content: "";
     position: absolute;
@@ -159,22 +171,25 @@ h3 {
     opacity: 0.7;
     z-index: -1;
   }
+
   &__h1 {
+    max-width: 688px;
     font-weight: 700;
     font-size: 60px;
     line-height: 100%;
     color: var.$white;
     font-family: font.$font-family-cormorant;
     margin-bottom: 21px;
-    @media (max-width: 720px) {//and (max-width: 1440px) {
+    @media (max-width: 720px) {
       font-size: 48px;
       margin-bottom: 30px;
     }
   }
   &__text {
+    max-width: 635px;
     color: var.$white;
     margin-bottom: 24px;
-    @media (max-width: 720px) {//and (max-width: 1440px) {
+    @media (max-width: 720px) {
       display: none;
     }
   }
@@ -185,23 +200,48 @@ h3 {
 
 .cards {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(4, minmax(255px, 1fr));
   padding: 0 165px;
   gap: 30px;
   position: relative;
   z-index: 3;
   margin-top: 60px;
+  @media (max-width: 1160px) {
+    grid-template-columns: repeat(3, minmax(255px, 1fr));
+    padding: 0 33px;
+    #card-4 {
+      display: none;
+    }
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, minmax(255px, 1fr));
+    padding: 0 33px;
+    #card-3 {
+      display: none;
+    }
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: minmax(255px, 1fr);
+    padding: 0 33px;
+    #card-2 {
+      display: none;
+    }
+  }
+
   &__item {
     border: 1px solid var.$background-shade;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
   }
+
   &__container {
-    padding: 16px 15px 27px;
+    padding: 15.5px 15px 26.5px;
     box-sizing: border-box;
     &._img {
       background: var.$background-shade;
-    }
-    &._content {
-      height: 243px;
     }
   }
   &__icon {
@@ -223,6 +263,7 @@ h3 {
     color: var.$grey;
   }
   &__button {
+    max-width: 145px;
     font-family: font.$font-family-open-sans;
     font-weight: 400;
     font-size: 16px;
@@ -231,7 +272,8 @@ h3 {
     border: 1px solid var.$primary-green;
     padding: 10.5px 28.5px;
     background-color: rgba(255, 255, 255, 0);
-    margin: 0 15px 27px;
+    margin: -12px 15px 22px;
+    box-sizing: border-box;
   }
 }
 
