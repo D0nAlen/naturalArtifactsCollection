@@ -10,10 +10,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
   position: relative;
   background-color: var.$background;
   overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 165px;
+  @media (max-width: 320px) {
+    padding: 0 33px;
+  }
 }
 
 button {
@@ -66,17 +71,22 @@ h3 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 165px;
-  position: absolute;
+  padding: 18px 0;
+
+  // position: absolute;
   width: 100%;
   z-index: 2;
   background-color: var.$background;
   box-sizing: border-box;
+  @media (max-width: 1160px) {
+    padding: 18px 32px;
+  }
   @media (max-width: 720px) {
     padding: 18px 32px;
   }
   &__logo {
     size: 65px 20px;
+    padding-right: 125px;
   }
   &__menu {
     display: flex;
@@ -86,6 +96,7 @@ h3 {
     font-size: 16px;
     line-height: 150%;
     color: var.$white;
+    padding-right: 298px;
     @media (max-width: 720px) {
       order: 3;
       top: 75px;
@@ -105,6 +116,8 @@ h3 {
     height: 24px;
     background-color: var.$primary-green;
     &._search {
+      width: 24px;
+      height: 24px;
       margin-right: 64px;
       mask-image: url(../IMG/search.svg);
       mask-repeat: no-repeat;
@@ -123,7 +136,8 @@ h3 {
 
 .banner {
   position: relative;
-  padding: 175px 165px 116px;
+  // padding: 175px 165px 116px;
+  padding: 115px 165px 116px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -134,19 +148,11 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 0 165px;
-    @media (max-width: 1160px) {
-      padding: 0 33px;
-    }
+    // padding: 0 165px;
+    // @media (max-width: 1160px) {
+    //   padding: 0 33px;
+    // }
   }
-  // @media (max-width: 900px) {
-  // }
-  // @media (max-width: 600px) {
-
-  // }
-  // @media (max-width: 720px) {
-  //   padding: 129px 32px 30px;
-  // }
   &::before {
     content: "";
     position: absolute;
@@ -171,7 +177,6 @@ h3 {
     opacity: 0.7;
     z-index: -1;
   }
-
   &__h1 {
     max-width: 688px;
     font-weight: 700;
@@ -200,30 +205,32 @@ h3 {
 
 .cards {
   display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(4, minmax(255px, 1fr));
-  padding: 0 165px;
-  gap: 30px;
-  position: relative;
+  justify-content: space-between;
+  grid-template-columns: repeat(4, 255px);
+  // padding: 0 165px;
+  gap: min(30px, 1vw);
+  // position: relative;
   z-index: 3;
   margin-top: 60px;
-  @media (max-width: 1160px) {
-    grid-template-columns: repeat(3, minmax(255px, 1fr));
-    padding: 0 33px;
+  box-sizing: border-box;
+  width: 100%;
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(3, 255px);
+    // padding: 0 33px;
     #card-4 {
       display: none;
     }
   }
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(2, minmax(255px, 1fr));
-    padding: 0 33px;
+  @media (max-width: 1120px) {
+    grid-template-columns: repeat(2, 255px);
+    // padding: 0 33px;
     #card-3 {
       display: none;
     }
   }
-  @media (max-width: 600px) {
-    grid-template-columns: minmax(255px, 1fr);
-    padding: 0 33px;
+  @media (max-width: 850px) {
+    grid-template-columns: 255px;
+    // padding: 0 33px;
     #card-2 {
       display: none;
     }
