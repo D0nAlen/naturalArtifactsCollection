@@ -15,7 +15,8 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   width: 100%;
-  padding: 0 165px;
+  // padding: 0 165px;
+  padding: 0 clamp(33px, -0.295rem + 11.79vw, 165px);
   @media (max-width: 320px) {
     padding: 0 33px;
   }
@@ -72,16 +73,11 @@ h3 {
   align-items: center;
   justify-content: space-between;
   padding: 18px 0;
-
-  // position: absolute;
   width: 100%;
   z-index: 2;
   background-color: var.$background;
   box-sizing: border-box;
   @media (max-width: 1160px) {
-    padding: 18px 32px;
-  }
-  @media (max-width: 720px) {
     padding: 18px 32px;
   }
   &__logo {
@@ -136,7 +132,6 @@ h3 {
 
 .banner {
   position: relative;
-  // padding: 175px 165px 116px;
   padding: 115px 165px 116px;
   display: flex;
   flex-direction: column;
@@ -144,11 +139,9 @@ h3 {
   width: 100%;
 
   &__container {
-    // width: 100%;
     display: flex;
     flex-direction: column;
     align-items: left;
-    // padding: 0 165px;
     // @media (max-width: 1160px) {
     //   padding: 0 33px;
     // }
@@ -207,30 +200,26 @@ h3 {
   display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(4, 255px);
-  // padding: 0 165px;
   gap: min(30px, 1vw);
-  // position: relative;
   z-index: 3;
   margin-top: 60px;
   box-sizing: border-box;
   width: 100%;
   @media (max-width: 1400px) {
     grid-template-columns: repeat(3, 255px);
-    // padding: 0 33px;
     #card-4 {
       display: none;
     }
   }
-  @media (max-width: 1120px) {
+  @media (max-width: 1015px) {
     grid-template-columns: repeat(2, 255px);
-    // padding: 0 33px;
+    justify-content: center;
     #card-3 {
       display: none;
     }
   }
-  @media (max-width: 850px) {
+  @media (max-width: 700px) {
     grid-template-columns: 255px;
-    // padding: 0 33px;
     #card-2 {
       display: none;
     }
