@@ -71,30 +71,40 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   padding: 18px 0;
   width: 100%;
   z-index: 2;
   background-color: var.$background;
   box-sizing: border-box;
-  @media (max-width: 1160px) {
-    padding: 18px 32px;
+  @media (max-width: 1439px) {
+    justify-content: space-between;
   }
+  // @media (max-width: 1160px) {
+  //   padding: 18px 32px;
+  // }
   &__logo {
     size: 65px 20px;
     padding-right: 125px;
+    @media (max-width: 1439px) {
+      padding-right: 109px;
+    }
   }
   &__menu {
     display: flex;
-    gap: 64px;
+    gap: clamp(32px, 1.429rem + 2.86vw, 64px);
     font-family: font.$font-family-open-sans;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     color: var.$white;
     padding-right: 298px;
-    @media (max-width: 720px) {
+    @media (max-width: 1439px) {
+      padding-right: 50px;
+    }
+    @media (max-width: 1052px) {
       order: 3;
+    }
+    @media (max-width: 720px) {
       top: 75px;
       gap: 32px;
       position: absolute;
@@ -103,7 +113,7 @@ h3 {
   }
   &__container {
     display: flex;
-    @media (max-width: 720px) {
+    @media (max-width: 1052px) {
       order: 2;
     }
   }
