@@ -29,6 +29,10 @@ button {
 a {
   text-decoration: none;
 }
+button,
+a:hover {
+  cursor: url(../IMG/cursor-pointer-white.png), auto;
+}
 
 li {
   list-style-type: none;
@@ -288,6 +292,42 @@ h3 {
   color: var.$white;
   margin-top: 26px;
   margin-bottom: 57px;
+  @media (max-width: 320px) {
+    gap: 20px;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    @media (max-width: 320px) {
+      display: none;
+    }
+  }
+  &__text {
+    @media (max-width: 320px) {
+      display: none;
+    }
+  }
+  .page__button {
+    width: 10px;
+    height: 10px;
+    background-color: var.$background-shade;
+    border-radius: 50%;
+    border: none;
+    display: none;
+    @media (max-width: 320px) {
+      display: block;
+    }
+  }
+  ._current-button {
+    background-color: var.$primary-green;
+    ;
+  }
 }
 
 .new-artefacts {
@@ -407,6 +447,9 @@ h3 {
     }
     &__button {
       color: var.$background-shade;
+    }
+    &__button:hover {
+      cursor: url(../IMG/cursor-pointer-black.png), auto;
     }
   }
   &__h2 {
